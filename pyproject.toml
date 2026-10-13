@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mod-load-order-manager"
+version = "0.4.2"
+description = "Windows desktop mod manager with deterministic load-order sorting."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "modloadorder maintainers" }]
+dependencies = [
+    "PySide6>=6.6,<7",
+    "platformdirs>=4.0",
+    "tomli-w>=1.0",
+    "py7zr>=0.21",
+    "filelock>=3.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-qt>=4.4",
+    "ruff>=0.4",
+    "mypy>=1.9",
+]
+
+[project.scripts]
+modloadorder = "modloadorder.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["modloadorder"]
