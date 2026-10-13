@@ -1,0 +1,29 @@
+# mod-load-order-manager
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+desktop.ini
+# user-local mod profiles — never commit
+profiles/*.local.json
+mods/_cache/
+logs/
